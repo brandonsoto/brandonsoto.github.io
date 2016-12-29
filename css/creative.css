@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    border-color: #F05F40;
+    border-color: white;
     border-width: 3px;
     max-width: 50px;
 }
@@ -28,12 +28,6 @@ a {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     transition: all 0.35s;
-    color: #F05F40;
-}
-
-a:hover,
-a:focus {
-    color: #eb3812;
 }
 
 h1,
@@ -52,7 +46,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #26252e;
+    background-color: #222222;
 }
 
 .bg-dark {
@@ -77,7 +71,7 @@ aside {
 }
 
 .navbar-default {
-    background-color: white;
+    background-color: #222222;
     border-color: rgba(34, 34, 34, 0.05);
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     -webkit-transition: all 0.35s;
@@ -86,21 +80,19 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    color: #F05F40;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+.navbar-default .navbar-header .navbar-brand:hover {
+    color: #e0356a;
 }
 
 .navbar-default .navbar-header .navbar-toggle {
     font-weight: 700;
     font-size: 12px;
-    color: #222222;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -109,17 +101,17 @@ aside {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
-    color: #222222;
+    color: white;
 }
 
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-    color: #F05F40;
+    color: #e0356a;
 }
 
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-    color: #F05F40 !important;
+    color: #e0356a !important;
     background-color: transparent;
 }
 
@@ -136,9 +128,8 @@ aside {
     .navbar-default .navbar-header .navbar-brand {
         color: rgba(255, 255, 255, 0.7);
     }
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: white;
+    .navbar-default .navbar-header .navbar-brand:hover {
+        color: #e0356a;
     }
     .navbar-default .nav > li > a,
     .navbar-default .nav > li > a:focus {
@@ -149,24 +140,19 @@ aside {
         color: white;
     }
     .navbar-default.affix {
-        background-color: white;
+        background-color: #222222;
         border-color: rgba(34, 34, 34, 0.05);
     }
-    .navbar-default.affix .navbar-header .navbar-brand {
-        color: #F05F40;
-        font-size: 14px;
-    }
+    .navbar-default.affix .navbar-header .navbar-brand {}
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: #e0356a;
     }
     .navbar-default.affix .nav > li > a,
-    .navbar-default.affix .nav > li > a:focus {
-        color: #222222;
-    }
+    .navbar-default.affix .nav > li > a:focus {}
     .navbar-default.affix .nav > li > a:hover,
     .navbar-default.affix .nav > li > a:focus:hover {
-        color: #F05F40;
+        color: #e0356a;
     }
 }
 
@@ -180,6 +166,8 @@ header {
     -o-background-size: cover;
     background-position: center;
     background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #222222;
     text-align: center;
     color: white;
@@ -198,6 +186,11 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 30px;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #525252;
 }
 
 header .header-content .header-content-inner hr {
@@ -326,7 +319,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #F05F40;
+    color: #e0356a;
 }
 
 .no-gutter > [class*='col-'] {
@@ -350,7 +343,7 @@ header .header-content .header-content-inner p {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
     color: #222222;
-    background-color: #f2f2f2;
+    background-color: blue;
     border-color: #ededed;
 }
 
