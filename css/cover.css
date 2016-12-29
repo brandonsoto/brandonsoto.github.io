@@ -9,3 +9,11 @@
 #contact {
     background-color: #222222;
 }
+
+#bs-example-navbar-collapse-1 li > a:hover {
+    color: #e0356a;
+}
+
+#footer-comment {
+    color: gray;
+}

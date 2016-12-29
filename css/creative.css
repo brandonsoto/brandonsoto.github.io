@@ -167,7 +167,6 @@ header {
     background-position: center;
     background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: #222222;
     text-align: center;
     color: white;

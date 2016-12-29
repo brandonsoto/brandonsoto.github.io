@@ -30,18 +30,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!--
-####################################################################################################
-####################################################################################################
-####################################################################################################
    Hello there, curious person. Welcome to my portfolio. Enjoy your stay. Big thanks to David 
    Miller (https://davidmiler.io/) for his bootstrap themes. This site would not be without his 
    contributations to the community.  
         
-      - Brandon
-####################################################################################################
-####################################################################################################
-####################################################################################################
--->
+      - Brandon -->
 </head>
 
 <body id="page-top">
@@ -188,15 +181,15 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Message</label>
-                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message." required></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <br>
                             <div id="success"></div>
                             <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <div class="form-group col-xs-12 text-center">
+                                    <button type="submit" class="btn btn-lg" id="send-message">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -211,7 +204,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>Seatle, WA</p>
+                        <p>Seattle, WA</p>
                     </div>
                     <div class="footer-col col-md-8">
                         <h3>Around the Web</h3>
@@ -228,7 +221,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12"> Copyright &copy; brandonsoto.me 2016 </div>
-                    <div class="col-lg-12">designed and coded with love</div>
+                    <div class="col-lg-12" id="footer-comment">// designed and coded with love</div>
                 </div>
             </div>
         </div>

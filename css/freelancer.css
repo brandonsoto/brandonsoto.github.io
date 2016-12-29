@@ -35,6 +35,15 @@ h6 {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
+    color: #18BC9C;
+}
+
+#about h2 {
+    color: #e0356a;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
 }
 
 hr.star-light,
@@ -303,6 +312,7 @@ section.success {
     font-size: 1.5em;
     background: none;
     box-shadow: none !important;
+    color: white;
     resize: none;
 }
 
@@ -331,6 +341,7 @@ section.success {
 .floating-label-form-group-with-value label {
     top: 0;
     opacity: 1;
+    color: gray;
 }
 
 .floating-label-form-group-with-focus label {
@@ -376,7 +387,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    color: #18BC9C;
+    color: rgb(165, 26, 69);
     background: white;
     border: solid 2px white;
 }
@@ -428,21 +439,21 @@ fieldset[disabled] .btn-primary.active {
     background-color: white;
 }
 
-.btn-success {
-    color: white;
+#send-message {
+    color: #222222;
     background-color: #18BC9C;
-    border-color: #18BC9C;
     font-weight: 700;
 }
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active,
-.btn-success.active,
-.open .dropdown-toggle.btn-success {
-    color: white;
-    background-color: #128f76;
-    border-color: #11866f;
+#send-message:hover {
+    color: #18BC9C;
+    background-color: white;
+}
+
+#send-message:active {
+    color: #222222;
+    background-color: #18BC9C;
+    font-weight: 700;
 }
 
 .btn-success:active,
@@ -466,8 +477,7 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-    background-color: #18BC9C;
-    border-color: #18BC9C;
+    background-color: rgb(9, 96, 142);
 }
 
 .btn-success .badge {
@@ -484,6 +494,10 @@ fieldset[disabled] .btn-success.active {
     text-align: center;
     font-size: 20px;
     line-height: 45px;
+}
+
+.text-danger {
+    color: #f04a4a;
 }
 
 .btn:focus,
