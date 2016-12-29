@@ -2,6 +2,10 @@
     color: #e0356a;
 }
 
+#job-title {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 #last-name {
     color: rgb(0, 216, 255);
 }
