@@ -8,22 +8,13 @@
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top'
-        , offset: 51
-    });
+
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function () {
         $('.navbar-toggle:visible').click();
     });
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-            offset: {
-                top: 100
-            }
-        })
-        // Initialize and Configure Scroll Reveal Animation
+
+    // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();
     sr.reveal('.sr-icons', {
         duration: 600
@@ -53,5 +44,13 @@
         , image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
         }
+    });
+t
+    $("body").on("input propertychange", ".floating-label-form-group", function (e) {
+        $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+    }).on("focus", ".floating-label-form-group", function () {
+        $(this).addClass("floating-label-form-group-with-focus");
+    }).on("blur", ".floating-label-form-group", function () {
+        $(this).removeClass("floating-label-form-group-with-focus");
     });
 })(jQuery); // End of use strict
