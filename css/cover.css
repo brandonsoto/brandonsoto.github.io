@@ -162,7 +162,6 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -556,10 +555,6 @@ footer {
 
 #my-brand:hover {
     color: #e0356a;
-}
-
-footer h3 {
-    color: margin-bottom: 30px;
 }
 
 footer .footer-above {
