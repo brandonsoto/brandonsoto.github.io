@@ -363,6 +363,10 @@ section h2 {
     }
 }
 
+label {
+    color: #777;
+}
+
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
