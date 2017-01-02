@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta content="IE=edge" http-equiv="X-UA-Compatible">
-      <meta content="width=device-width, initial-scale=1" name="viewport">
-      <meta content="" name="description">
-      <meta content="" name="author">
+      <meta charset="utf-8" />
+      <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta name="description" content="Brandon Soto's portfolio." />
+      <meta name="author" content="Brandon Soto" />
+      <meta name="keywords" content="portfolio, programmer, software developer, software engineer, software development, web development, game development" />
+      <meta name="pragma" content="no-cache" />
       <title>Brandon Soto's Portfolio</title>
       <!-- Bootstrap Core CSS -->
       <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
@@ -58,7 +60,7 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-12">
-                  <img alt="" class="img-responsive" height="350px" src="img/logo.svg" width="350px">
+                  <img alt="" class="img-responsive" src="img/logo.svg" height="350" width="350">
                   <div class="intro-text">
                      <span class="name"><span id="first-name">Brandon</span> <span id=
                         "last-name">Soto</span></span>
@@ -72,7 +74,7 @@
       <section class="bg-primary" id="about">
          <div class="container">
             <div class="row">
-               <div class="col-md-5 text-center"><img id="selfie" src="img/hemingway.jpeg"></div>
+               <div class="col-md-5 text-center"><img id="selfie" src="img/hemingway.jpeg" alt="The man himself"></div>
                <div class="col-md-7 text-center">
                   <h2 class="section-heading">Who am I?</h2>
                   <hr class="light">
@@ -203,28 +205,28 @@
                <div class="col-lg-8 col-lg-offset-2">
                   <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                   <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                  <form id="contactForm" name="sentMessage" novalidate="">
+                  <form id="contactForm" name="contactForm" novalidate="">
                      <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                           <label>Name</label> <input class="form-control" data-validation-required-message=
+                           <label for="name">Name</label> <input class="form-control" data-validation-required-message=
                               "Please enter your name." id="name" placeholder="Name" required="" type="text">
                            <p class="help-block text-danger"></p>
                         </div>
                      </div>
                      <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                           <label>Email Address</label> <input class="form-control" data-validation-required-message="Please enter your email address." id="email" placeholder="Email Address" required="" type=email>
+                           <label for="email">Email Address</label> <input class="form-control" data-validation-required-message="Please enter your email address." id="email" placeholder="Email Address" required="" type=email>
                            <p class="help-block text-danger"></p>
                         </div>
                      </div>
                      <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                           <label>Message</label>
+                           <label for="message">Message</label>
                            <textarea class="form-control" data-validation-required-message="Please enter a message." id="message" placeholder="Message" required="" rows="5"></textarea>
                            <p class="help-block text-danger"></p>
                         </div>
                      </div>
-                     <input type="text" name="_gotcha" style="display:none" id="gotcha">
+                     <input type="text" name="_gotcha" style="display:none" id="gotcha" value="">
                      <br>
                      <div id="success"></div>
                      <div class="row">
