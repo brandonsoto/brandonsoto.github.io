@@ -14,7 +14,14 @@
         $('.navbar-toggle:visible').click();
     });
 
+
+
     // Initialize and Configure Scroll Reveal Animation
+    $('body').scrollspy({
+       target: '.navbar-fixed-top'
+       , offset: 51
+    });
+
     window.sr = ScrollReveal();
     sr.reveal('.sr-icons', {
         duration: 600
