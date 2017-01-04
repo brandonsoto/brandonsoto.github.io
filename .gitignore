@@ -5,3 +5,6 @@
 .sass-cache/
 *.css.map
 
+## npm ##
+node_modules
+
