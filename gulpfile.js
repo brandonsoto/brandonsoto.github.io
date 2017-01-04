@@ -15,16 +15,6 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
-// Minify compiled CSS
-gulp.task('minify-css', function() {
-    return gulp.src('css/main.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
-});
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
