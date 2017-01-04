@@ -1,1 +1,7 @@
-.idea/*
+### Jetbrains ###
+.idea/
+
+### Sass ###
+.sass-cache/
+*.css.map
+
