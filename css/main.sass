@@ -1,5 +1,8 @@
+@import 'variables'
+@import 'layout'
+
 #first-name
-  color: #e0356a
+  color: $monokai-pink
 
 #job-title
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -8,13 +11,13 @@
   text-transform: lowercase
 
 #last-name
-  color: rgb(0, 216, 255)
+  color: $monokai-blue
 
 #contact
-  background-color: #222222
+  background-color: $dark-background
 
 #bs-example-navbar-collapse-1 li > a:hover
-  color: #e0356a
+  color: $monokai-pink
 
 #footer-comment
   color: gray
@@ -44,7 +47,7 @@ p
   margin-bottom: 20px
 
 .bg-primary
-  background-color: #222222
+  background-color: $dark-background
 
 .text-faded
   color: rgba(255, 255, 255, 0.7)
@@ -56,7 +59,7 @@ section
   padding: 0
 
 .navbar-default
-  background-color: #222222
+  background-color: $dark-background
   border-color: rgba(34, 34, 34, 0.05)
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif
   -webkit-transition: all 0.35s
@@ -89,14 +92,14 @@ section
         color: white
 
       &:hover, &:focus:hover
-        color: #e0356a
+        color: $monokai-pink
 
     &.active > a
-      color: #e0356a !important
+      color: $monokai-pink !important
       background-color: transparent
 
       &:focus
-        color: #e0356a !important
+        color: $monokai-pink !important
         background-color: transparent
 
       &:hover, &:focus:hover
@@ -108,7 +111,7 @@ section
 
 @media (min-width: 768px)
   .navbar-default
-    background-color: #222222
+    background-color: $dark-background
     border-color: rgba(255, 255, 255, 0.3)
 
     .navbar-header .navbar-brand
@@ -124,14 +127,12 @@ section
         color: white
 
     &.affix
-      background-color: #222222
+      background-color: $dark-background
       border-color: rgba(34, 34, 34, 0.05)
 
       .nav > li > a
-        &:focus
-
         &:hover, &:focus:hover
-          color: #e0356a
+          color: $monokai-pink
 
   #selfie
     width: 400px
@@ -150,7 +151,7 @@ header
   background-position: center
   background-image: url('../img/header.jpg')
   background-repeat: no-repeat
-  background-color: #222222
+  background-color: $dark-background
   text-align: center
   color: white
 
@@ -224,8 +225,8 @@ header
 
 .btn-primary
   color: white
-  background-color: #F05F40
-  border-color: #F05F40
+  background-color: $monokai-orange
+  border-color: $monokai-orange
   -webkit-transition: all 0.35s
   -moz-transition: all 0.35s
   transition: all 0.35s
@@ -255,22 +256,22 @@ header
   text-transform: uppercase
 
 body
-  webkit-tap-highlight-color: #222222
+  webkit-tap-highlight-color: $dark-background
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
   overflow-x: hidden
 
 h1, h2, h3, h4, h5, h6
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: $mont-font
   text-transform: uppercase
   font-weight: 700
-  color: #18BC9C
+  color: $monokai-green
   font-size: 20px
 
 #about h2
-  color: #e0356a
+  color: $monokai-pink
 
 h3
-  color: rgb(255, 255, 255)
+  color: white
 
 header
   .container
@@ -283,7 +284,7 @@ header
 
   .intro-text .name
     display: block
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-family: $mont-font
     text-transform: uppercase
     font-weight: 700
     font-size: 2em
@@ -344,7 +345,7 @@ label
   color: gray
 
 .floating-label-form-group-with-focus label
-  color: #18BC9C
+  color: $monokai-green
 
 form .row:first-child .floating-label-form-group
   border-top: 1px solid #eeeeee
@@ -353,7 +354,7 @@ footer
   color: white
 
 #my-brand:hover
-  color: #e0356a
+  color: $monokai-pink
 
 footer
   .footer-above
@@ -365,7 +366,7 @@ footer
 
   .footer-below
     padding: 25px 0
-    background-color: #222222
+    background-color: $dark-background
 
 .btn-outline
   color: white
@@ -381,17 +382,17 @@ footer
     border: solid 2px white
 
 #send-message
-  color: #222222
-  background-color: #18BC9C
+  color: $dark-background
+  background-color: $monokai-green
   font-weight: 700
 
   &:hover
-    color: #18BC9C
+    color: $monokai-green
     background-color: white
 
   &:active
-    color: #222222
-    background-color: #18BC9C
+    color: $dark-background
+    background-color: $monokai-green
     font-weight: 700
 
 .btn-social
