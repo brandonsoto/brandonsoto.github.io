@@ -1,159 +1,129 @@
-/* line 4, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css?family=Merriweather);
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url(//fonts.googleapis.com/css?family=Lato);
 #first-name {
   color: #e0356a; }
 
-/* line 7, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #job-title {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   font-weight: 300;
   text-transform: lowercase; }
 
-/* line 13, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #last-name {
   color: #00d8ff; }
 
-/* line 16, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #contact {
   background-color: #222222; }
 
-/* line 19, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #bs-example-navbar-collapse-1 li > a:hover {
   color: #e0356a; }
 
-/* line 22, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #footer-comment {
   color: gray; }
 
-/* line 25, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 html {
   height: 100%;
   width: 100%; }
 
-/* line 29, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif; }
+  font-family: "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 34, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 hr {
   border-color: white;
   border-width: 3px;
   max-width: 50px; }
 
-/* line 39, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
 
-/* line 44, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px; }
 
-/* line 49, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .bg-primary {
   background-color: #222222; }
 
-/* line 52, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .text-faded {
   color: rgba(255, 255, 255, 0.7); }
 
-/* line 55, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 section {
   padding: 100px 0; }
 
-/* line 58, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .no-padding {
   padding: 0; }
 
-/* line 61, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .navbar-default {
   background-color: #222222;
   border-color: rgba(34, 34, 34, 0.05);
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
-  /* line 70, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .navbar-default .navbar-header .navbar-brand {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase; }
-  /* line 75, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .navbar-default .navbar-header .navbar-toggle {
     font-weight: 700;
     font-size: 12px;
     color: white;
     text-transform: uppercase; }
-  /* line 82, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .navbar-default .nav > li > a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
     color: white; }
-    /* line 88, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .nav > li > a:focus {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 13px;
       color: white; }
-    /* line 94, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
       color: #e0356a; }
-  /* line 97, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .navbar-default .nav > li.active > a {
     color: #e0356a !important;
     background-color: transparent; }
-    /* line 101, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .nav > li.active > a:focus {
       color: #e0356a !important;
       background-color: transparent; }
-    /* line 105, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .nav > li.active > a:hover, .navbar-default .nav > li.active > a:focus:hover {
       background-color: transparent; }
 
-/* line 108, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #selfie {
   width: 300px;
   height: 250px; }
 
 @media (min-width: 768px) {
-  /* line 113, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .navbar-default {
     background-color: #222222;
     border-color: rgba(255, 255, 255, 0.3); }
-    /* line 117, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .navbar-header .navbar-brand {
       color: rgba(255, 255, 255, 0.7); }
-    /* line 120, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default .nav > li > a {
       color: rgba(255, 255, 255, 0.7); }
-      /* line 123, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .navbar-default .nav > li > a:focus {
         color: rgba(255, 255, 255, 0.7); }
-      /* line 126, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
         color: white; }
-    /* line 129, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .navbar-default.affix {
       background-color: #222222;
       border-color: rgba(34, 34, 34, 0.05); }
-      /* line 134, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
         color: #e0356a; }
-  /* line 137, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
+
   #selfie {
     width: 400px;
     height: 350px; }
-  /* line 141, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
+
   #job-title {
     font-size: 2.4em; } }
-
-/* line 144, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 header {
   position: relative;
   width: 100%;
@@ -168,26 +138,20 @@ header {
   text-align: center;
   color: white; }
 
-/* line 159, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #525252; }
 
 @media (min-width: 768px) {
-  /* line 163, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   header {
     min-height: 100%; } }
-
-/* line 166, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .section-heading {
   margin-top: 0; }
 
-/* line 169, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .portfolio-box {
   position: relative;
   display: block;
   max-width: 650px;
   margin: 0 auto; }
-  /* line 175, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .portfolio-box .portfolio-box-caption {
     color: white;
     opacity: 0;
@@ -201,46 +165,35 @@ header {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     transition: all 0.35s; }
-    /* line 189, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
       width: 100%;
       text-align: center;
       position: absolute;
       top: 50%;
       transform: translateY(-50%); }
-      /* line 196, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category, .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 15px; }
-      /* line 200, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
         text-transform: uppercase;
         font-weight: 600;
         font-size: 14px; }
-      /* line 205, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
       .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 18px; }
-  /* line 208, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .portfolio-box:hover .portfolio-box-caption {
     opacity: 1; }
-  /* line 211, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .portfolio-box:focus {
     outline: none; }
 
 @media (min-width: 768px) {
-  /* line 216, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
     font-size: 16px; }
-  /* line 219, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px; } }
-
-/* line 222, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
 
-/* line 226, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .btn-primary {
   color: white;
   background-color: #F05F40;
@@ -248,41 +201,34 @@ header {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s; }
-  /* line 234, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active {
     color: white;
     background-color: #ee4b28;
     border-color: #ed431f; }
 
-/* line 239, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .open > .dropdown-toggle.btn-primary {
   color: white;
   background-color: #ee4b28;
   border-color: #ed431f; }
 
-/* line 245, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .btn-primary:active, .btn-primary.active {
   background-image: none; }
 
-/* line 248, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .open > .dropdown-toggle.btn-primary {
   background-image: none; }
 
-/* line 251, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: none;
   border-radius: 300px;
   font-weight: 700;
   text-transform: uppercase; }
 
-/* line 258, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 body {
   webkit-tap-highlight-color: #222222;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden; }
 
-/* line 263, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -290,25 +236,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #18BC9C;
   font-size: 20px; }
 
-/* line 270, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #about h2 {
   color: #e0356a; }
 
-/* line 273, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 h3 {
   color: white; }
 
-/* line 277, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 header .container {
   padding-top: 100px;
   padding-bottom: 50px; }
-
-/* line 281, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 header img {
   display: block;
   margin: 0 auto 20px; }
-
-/* line 285, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 header .intro-text .name {
   display: block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -317,41 +256,30 @@ header .intro-text .name {
   font-size: 2em; }
 
 @media (min-width: 768px) {
-  /* line 294, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   header .container {
     padding-top: 200px;
     padding-bottom: 100px; }
-  /* line 299, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   header .intro-text .name {
     font-size: 4.75em; }
-  /* line 302, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   header .intro-text .skills {
     font-size: 1.75em; } }
-
-/* line 305, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 section {
   padding: 100px 0; }
-  /* line 308, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   section h2 {
     margin: 0;
     font-size: 3em; }
 
 @media (max-width: 767px) {
-  /* line 313, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   section {
     padding: 75px 0; } }
-
-/* line 316, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 label {
   color: #777; }
 
-/* line 319, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee; }
-  /* line 325, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .floating-label-form-group input, .floating-label-form-group textarea {
     z-index: 1;
     position: relative;
@@ -364,48 +292,36 @@ label {
     box-shadow: none !important;
     color: white;
     resize: none; }
-  /* line 338, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .floating-label-form-group:not(:first-child) {
     padding-left: 14px;
     border-left: 1px solid #eeeeee; }
 
-/* line 342, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .floating-label-form-group-with-value label {
   top: 0;
   opacity: 1;
   color: gray; }
 
-/* line 347, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .floating-label-form-group-with-focus label {
   color: #18BC9C; }
 
-/* line 350, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee; }
 
-/* line 353, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 footer {
   color: white; }
 
-/* line 356, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #my-brand:hover {
   color: #e0356a; }
 
-/* line 360, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 footer .footer-above {
   padding-top: 50px;
   background-color: #a51a45; }
-
-/* line 364, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 footer .footer-col {
   margin-bottom: 50px; }
-
-/* line 367, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 footer .footer-below {
   padding: 25px 0;
   background-color: #222222; }
 
-/* line 371, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .btn-outline {
   color: white;
   font-size: 20px;
@@ -413,28 +329,23 @@ footer .footer-below {
   background: transparent;
   transition: all 0.3s ease-in-out;
   margin-top: 15px; }
-  /* line 379, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: #a51a45;
     background: white;
     border: solid 2px white; }
 
-/* line 384, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 #send-message {
   color: #222222;
   background-color: #18BC9C;
   font-weight: 700; }
-  /* line 389, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   #send-message:hover {
     color: #18BC9C;
     background-color: white; }
-  /* line 393, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   #send-message:active {
     color: #222222;
     background-color: #18BC9C;
     font-weight: 700; }
 
-/* line 398, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .btn-social {
   display: inline-block;
   height: 50px;
@@ -445,11 +356,9 @@ footer .footer-below {
   font-size: 20px;
   line-height: 45px; }
 
-/* line 408, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .text-danger {
   color: #f04a4a; }
 
-/* line 411, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
 .scroll-top {
   position: fixed;
   right: 2%;
@@ -457,14 +366,12 @@ footer .footer-below {
   width: 50px;
   height: 50px;
   z-index: 1049; }
-  /* line 419, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
   .scroll-top .btn {
     font-size: 20px;
     width: 50px;
     height: 50px;
     border-radius: 100%;
     line-height: 28px; }
-    /* line 426, /home/bsoto/Documents/brandonsoto.github.io/css/main.sass */
     .scroll-top .btn:focus {
       outline: none; }
 
