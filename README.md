@@ -1,4 +1,5 @@
-# brandonsoto.github.io
+# Personal Portfolio [![Known Vulnerabilities](https://snyk.io/test/github/brandonsoto/brandonsoto.github.io/badge.svg)](https://snyk.io/test/github/brandonsoto/brandonsoto.github.io)
+
 
 ![Project Preview](homepage.jpg)
 
