@@ -1,10 +1,7 @@
 var gulp        = require('gulp');
-var browserSync = require('browser-sync').create()
-var header      = require('gulp-header')
+var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var cleanCSS    = require('gulp-clean-css')
-var pkg         = require('./package.json')
+var pkg         = require('./package.json');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -15,20 +12,14 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
-
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
     return gulp.src('css/main.sass')
-        .pipe(sass({
-            includePaths: ['css'],
-            onError: browserSync.notify
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('css/'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('css/'));
+       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+       .pipe(gulp.dest('css/'))
+       .pipe(browserSync.reload({stream:true}));
 });
 
 /**
@@ -36,7 +27,7 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('css/**', ['sass', browserSync.reload]);
+    gulp.watch('css/**', ['sass']);
     gulp.watch('js/**', browserSync.reload );
     gulp.watch('index.html', browserSync.reload );
 });
@@ -44,7 +35,7 @@ gulp.task('watch', function () {
 
 
 // Run everything
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'sass', 'watch']);
 
 // Configure the browserSync task
 gulp.task('browser-sync', function() {
@@ -53,12 +44,4 @@ gulp.task('browser-sync', function() {
             baseDir: ''
         },
     })
-})
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'watch'], function() {
-    // Reloads the browser whenever HTML, JS, CSS files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('js/*.js', browserSync.reload);
-    gulp.watch('cs/*.css', browserSync.reload);
 });

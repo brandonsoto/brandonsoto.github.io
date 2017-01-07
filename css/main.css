@@ -1,7 +1,7 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
-@import url(//fonts.googleapis.com/css?family=Merriweather);
-@import url(//fonts.googleapis.com/css?family=Montserrat);
-@import url(//fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Lato);
 #first-name {
   color: #e0356a; }
 
@@ -117,13 +117,12 @@ section {
       border-color: rgba(34, 34, 34, 0.05); }
       .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
         color: #e0356a; }
-
   #selfie {
     width: 400px;
     height: 350px; }
-
   #job-title {
     font-size: 2.4em; } }
+
 header {
   position: relative;
   width: 100%;
@@ -144,6 +143,7 @@ header {
 @media (min-width: 768px) {
   header {
     min-height: 100%; } }
+
 .section-heading {
   margin-top: 0; }
 
@@ -190,6 +190,7 @@ header {
     font-size: 16px; }
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px; } }
+
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
@@ -245,9 +246,11 @@ h3 {
 header .container {
   padding-top: 100px;
   padding-bottom: 50px; }
+
 header img {
   display: block;
   margin: 0 auto 20px; }
+
 header .intro-text .name {
   display: block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -263,6 +266,7 @@ header .intro-text .name {
     font-size: 4.75em; }
   header .intro-text .skills {
     font-size: 1.75em; } }
+
 section {
   padding: 100px 0; }
   section h2 {
@@ -272,6 +276,7 @@ section {
 @media (max-width: 767px) {
   section {
     padding: 75px 0; } }
+
 label {
   color: #777; }
 
@@ -316,8 +321,10 @@ footer {
 footer .footer-above {
   padding-top: 50px;
   background-color: #a51a45; }
+
 footer .footer-col {
   margin-bottom: 50px; }
+
 footer .footer-below {
   padding: 25px 0;
   background-color: #222222; }
@@ -374,5 +381,3 @@ footer .footer-below {
     line-height: 28px; }
     .scroll-top .btn:focus {
       outline: none; }
-
-/*# sourceMappingURL=main.css.map */

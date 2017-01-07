@@ -1,32 +1,24 @@
 {
-    "name": "portfolio",
-    "title": "Brandon Soto's Portfolio",
-    "version": "0.0.0",
-    "main": "gulpfile.js",
-    "homepage": "https://brandon.soto.me",
-    "author": "Brandon Soto",
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/BrandonSoto/brandonsoto.github.io/blob/master/LICENSE"
-    },
-    "devDependencies": {
-        "bootstrap": "^3.3.7",
-        "browser-sync": "^2.18.5",
-        "font-awesome": "^4.7.0",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^3.1.1",
-        "gulp-clean-css": "^2.3.2",
-        "gulp-header": "^1.8.8",
-        "gulp-sass": "^3.0.0",
-        "jquery": "^3.1.1",
-        "magnific-popup": "^1.1.0",
-        "scrollreveal": "^3.3.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BrandonSoto/brandonsoto.github.io.git"
-    },
-    "bugs": {
-        "url": "https://github.com/BrandonSoto/brandonsoto.github.io.git/issues"
-    }
+  "name": "portfolio",
+  "title": "Brandon Soto's Portfolio",
+  "version": "0.0.0",
+  "main": "gulpfile.js",
+  "homepage": "https://brandon.soto.me",
+  "author": "Brandon Soto",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BrandonSoto/brandonsoto.github.io/blob/master/LICENSE"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrandonSoto/brandonsoto.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrandonSoto/brandonsoto.github.io.git/issues"
+  }
 }
