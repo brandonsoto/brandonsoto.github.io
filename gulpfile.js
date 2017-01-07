@@ -38,10 +38,6 @@ gulp.task('watch', function () {
 });
 
 
-
-// Run everything
-gulp.task('default', ['browser-sync', 'sass', 'watch']);
-
 // Configure the browserSync task
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -50,3 +46,6 @@ gulp.task('browser-sync', function() {
         },
     })
 });
+
+gulp.task('default', ['sass']);
+gulp.task('dev', ['browser-sync', 'sass', 'watch']);
