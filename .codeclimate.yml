@@ -26,4 +26,4 @@ ratings:
   - "**.rb"
 exclude_paths:
 - vendor/
-  js/jqBootstrapValidation.js
+- js/jqBootstrapValidation.js
