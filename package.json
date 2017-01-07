@@ -9,6 +9,9 @@
     "type": "MIT",
     "url": "https://github.com/BrandonSoto/brandonsoto.github.io/blob/master/LICENSE"
   },
+  "scripts": {
+     "test": "js/test.js"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
