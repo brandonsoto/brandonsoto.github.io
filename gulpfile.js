@@ -1,9 +1,10 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass        = require('gulp-sass');
+var gulp         = require('gulp');
+var browserSync  = require('browser-sync').create();
+var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps  = require('gulp-sourcemaps');
-var pkg         = require('./package.json');
+var bootlint     = require('gulp-bootlint');
+var sourcemaps   = require('gulp-sourcemaps');
+var pkg          = require('./package.json');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -13,6 +14,13 @@ var banner = ['/*!\n',
     ' */\n',
     ''
 ].join('');
+
+gulp.task( 'bootlint', function() {
+    return gulp.src('index.html')
+        .pipe(bootlint({
+            stoponerror: true
+        }));
+});
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -43,9 +51,9 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: ''
-        },
+        }
     })
 });
 
-gulp.task('default', ['sass']);
-gulp.task('dev', ['browser-sync', 'sass', 'watch']);
+gulp.task('default', ['sass', 'bootlint']);
+gulp.task('dev', ['browser-sync', 'sass', 'bootlint', 'watch']);

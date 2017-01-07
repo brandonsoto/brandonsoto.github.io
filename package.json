@@ -1,21 +1,20 @@
 {
   "name": "portfolio",
   "title": "Brandon Soto's Portfolio",
-  "version": "0.0.0",
+  "description": "My first ever website and portfolio.",
+  "version": "1.0.0",
   "main": "gulpfile.js",
   "homepage": "https://brandon.soto.me",
   "author": "Brandon Soto",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BrandonSoto/brandonsoto.github.io/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "scripts": {
-     "test": "js/test.js"
+    "test": "js/test.js"
   },
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-bootlint": "^0.8.0",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1"
   },
