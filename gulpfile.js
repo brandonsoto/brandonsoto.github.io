@@ -1,6 +1,8 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps  = require('gulp-sourcemaps');
 var pkg         = require('./package.json');
 
 // Set the banner content
@@ -17,7 +19,10 @@ var banner = ['/*!\n',
  */
 gulp.task('sass', function () {
     return gulp.src('./css/**/*.sass')
+       .pipe(sourcemaps.init())
        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+       .pipe(sourcemaps.write())
+       .pipe(autoprefixer())
        .pipe(gulp.dest('./css/'))
        .pipe(browserSync.reload({stream:true}));
 });
