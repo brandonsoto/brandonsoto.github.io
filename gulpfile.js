@@ -16,9 +16,9 @@ var banner = ['/*!\n',
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('css/main.sass')
+    return gulp.src('./css/**/*.sass')
        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-       .pipe(gulp.dest('css/'))
+       .pipe(gulp.dest('./css/'))
        .pipe(browserSync.reload({stream:true}));
 });
 
