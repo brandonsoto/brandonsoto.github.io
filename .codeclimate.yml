@@ -31,6 +31,4 @@ exclude_paths:
 - assets/css/**/*.sass
 - CNAME
 - LICENSE
-- *.jpg
 - node_modules/
-- \..*
