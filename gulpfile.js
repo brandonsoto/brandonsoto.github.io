@@ -28,9 +28,7 @@ gulp.task( 'bootlint', function() {
 gulp.task('sass', function () {
     return gulp.src('assets/css/main.sass')
        .pipe(sourcemaps.init())
-       .pipe(sass({
-           outputStyle: 'compact'
-       }).on('error', sass.logError))
+       .pipe(sass().on('error', sass.logError))
        .pipe(sourcemaps.write())
        .pipe(autoprefixer())
        .pipe(gulp.dest('assets/css/'))
