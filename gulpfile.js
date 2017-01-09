@@ -15,7 +15,7 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
-gulp.task( 'bootlint', function() {
+gulp.task( 'bootlint', ['sass'], function() {
     return gulp.src('index.html')
         .pipe(bootlint({
             stoponerror: true
