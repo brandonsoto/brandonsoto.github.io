@@ -27,3 +27,10 @@ ratings:
 exclude_paths:
 - assets/vendor/
 - assets/js/jqBootstrapValidation.js
+- assets/img/
+- assets/css/**/*.sass
+- CNAME
+- LICENSE
+- *.jpg
+- node_modules/
+- \..*
