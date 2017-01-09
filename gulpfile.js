@@ -26,12 +26,14 @@ gulp.task( 'bootlint', function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('./css/**/*.sass')
+    return gulp.src('assets/css/main.sass')
        .pipe(sourcemaps.init())
-       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+       .pipe(sass({
+           outputStyle: 'compact'
+       }).on('error', sass.logError))
        .pipe(sourcemaps.write())
        .pipe(autoprefixer())
-       .pipe(gulp.dest('./css/'))
+       .pipe(gulp.dest('assets/css/'))
        .pipe(browserSync.reload({stream:true}));
 });
 
@@ -40,8 +42,8 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('css/**', ['sass']);
-    gulp.watch('js/**', browserSync.reload );
+    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/js/**', browserSync.reload );
     gulp.watch('index.html', browserSync.reload );
 });
 
