@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var bootlint     = require('gulp-bootlint');
 var sourcemaps   = require('gulp-sourcemaps');
 var sassLint     = require('gulp-sass-lint');
+var eslint       = require('gulp-eslint');
 var pkg          = require('./package.json');
 
 // Set the banner content
@@ -26,7 +27,7 @@ gulp.task( 'bootlint', ['sass'], function() {
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
+gulp.task('sass', ['sass-lint'], function () {
     return gulp.src('assets/css/main.sass')
        .pipe(sourcemaps.init())
        .pipe(sass().on('error', sass.logError))
@@ -42,7 +43,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass-lint', 'sass']);
-    gulp.watch('assets/js/**', browserSync.reload );
+    gulp.watch('assets/js/**', ['js-lint', browserSync.reload]);
     gulp.watch('index.html', ['bootlint', browserSync.reload] );
 });
 
@@ -59,8 +60,18 @@ gulp.task('browser-sync', function() {
 gulp.task('sass-lint', function() {
     return stream = gulp.src('assets/css/**/*.sass')
         .pipe( sassLint({
+            files: {
+                ignore: 'assets/vendor/**/*.sass'
+            }
+        }) )
+        .pipe(sassLint.failOnError());
+});
+
+gulp.task('sass-lint-verbose', function() {
+    return stream = gulp.src('assets/css/**/*.sass')
+        .pipe( sassLint({
             options: {
-                formatter: 'stylish',
+                formatter: 'compact',
                 'max-warnings': 50
             },
             files: {
@@ -71,5 +82,12 @@ gulp.task('sass-lint', function() {
         .pipe(sassLint.failOnError());
 });
 
-gulp.task('default', ['sass-lint', 'sass', 'bootlint']);
-gulp.task('dev', ['sass-lint', 'sass', 'bootlint', 'browser-sync', 'watch']);
+gulp.task('js-lint', function() {
+    return gulp.src(['assets/js/**/*.js', '!node_modules/**'])
+        .pipe(eslint('.eslintrc'))
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
+});
+
+gulp.task('default', ['sass-lint', 'sass', 'bootlint', 'js-lint']);
+gulp.task('dev', ['sass', 'bootlint', 'js-lint', 'browser-sync', 'watch']);

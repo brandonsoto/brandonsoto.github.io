@@ -1,9 +1,10 @@
 @import 'base/module'
-@import "components/module"
+@import 'components/module'
 @import 'layout/module'
-@import "utils/module"
+@import 'utils/module'
 
 // TODO(brandon): move all of this into the proper sass file; they should not be in main.sass
+
 #first-name
   color: $monokai-pink
 
@@ -19,8 +20,10 @@
 #contact
   background-color: $dark-background
 
-#bs-example-navbar-collapse-1 li > a:hover
-  color: $monokai-pink
+#bs-example-navbar-collapse-1
+  li
+    > a:hover
+      color: $monokai-pink
 
 #footer-comment
   color: gray
@@ -90,19 +93,22 @@ section
         font-size: 13px
         color: white
 
-      &:hover, &:focus:hover
+      &:hover,
+      &:focus:hover
         color: $monokai-pink
 
-    &.active > a
-      color: $monokai-pink !important
-      background-color: transparent
-
-      &:focus
+    &.active
+      > a
         color: $monokai-pink !important
         background-color: transparent
 
-      &:hover, &:focus:hover
-        background-color: transparent
+        &:focus
+          color: $monokai-pink !important
+          background-color: transparent
+
+        &:hover,
+        &:focus:hover
+          background-color: transparent
 
 #selfie
   width: 300px
@@ -113,11 +119,14 @@ section
     background-color: $dark-background
     border-color: rgba(255, 255, 255, 0.3)
 
-    .navbar-header .navbar-brand
-      color: rgba(255, 255, 255, 0.7)
+    .navbar-header
+      .navbar-brand
+        color: rgba(255, 255, 255, 0.7)
 
-    .nav > li > a
-      color: rgba(255, 255, 255, 0.7)
+    .nav
+      > li
+        > a
+          color: rgba(255, 255, 255, 0.7)
 
       &:focus
         color: rgba(255, 255, 255, 0.7)
@@ -129,9 +138,11 @@ section
       background-color: $dark-background
       border-color: rgba(34, 34, 34, 0.05)
 
-      .nav > li > a
-        &:hover, &:focus:hover
-          color: $monokai-pink
+      .nav
+        > li
+          > a
+            &:hover, &:focus:hover
+              color: $monokai-pink
 
   #selfie
     width: 400px
@@ -155,9 +166,11 @@ header
   text-align: center
   color: white
 
-.navbar-default .navbar-toggle
-  &:focus, &:hover
-    background-color: #525252
+.navbar-default
+  .navbar-toggle
+    &:focus,
+    &:hover
+      background-color: #525252
 
 @media (min-width: 768px)
   header
