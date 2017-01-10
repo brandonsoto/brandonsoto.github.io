@@ -58,7 +58,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass-lint', function() {
-    return stream = gulp.src('assets/css/**/*.sass')
+    return gulp.src('assets/css/**/*.sass')
         .pipe( sassLint({
             files: {
                 ignore: 'assets/vendor/**/*.sass'
