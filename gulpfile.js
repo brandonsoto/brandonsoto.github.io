@@ -68,7 +68,7 @@ gulp.task('sass-lint', function() {
 });
 
 gulp.task('sass-lint-verbose', function() {
-    return stream = gulp.src('assets/css/**/*.sass')
+    return gulp.src('assets/css/**/*.sass')
         .pipe( sassLint({
             options: {
                 formatter: 'compact',
