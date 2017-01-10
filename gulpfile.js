@@ -4,6 +4,7 @@ var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var bootlint     = require('gulp-bootlint');
 var sourcemaps   = require('gulp-sourcemaps');
+var sassLint     = require('gulp-sass-lint');
 var pkg          = require('./package.json');
 
 // Set the banner content
@@ -40,7 +41,7 @@ gulp.task('sass', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/css/**', ['sass-lint', 'sass']);
     gulp.watch('assets/js/**', browserSync.reload );
     gulp.watch('index.html', ['bootlint', browserSync.reload] );
 });
@@ -55,5 +56,20 @@ gulp.task('browser-sync', function() {
     })
 });
 
-gulp.task('default', ['sass', 'bootlint']);
-gulp.task('dev', ['browser-sync', 'sass', 'bootlint', 'watch']);
+gulp.task('sass-lint', function() {
+    return stream = gulp.src('assets/css/**/*.sass')
+        .pipe( sassLint({
+            options: {
+                formatter: 'stylish',
+                'max-warnings': 50
+            },
+            files: {
+                ignore: 'assets/vendor/**/*.sass'
+            }
+        }) )
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError());
+});
+
+gulp.task('default', ['sass-lint', 'sass', 'bootlint']);
+gulp.task('dev', ['sass-lint', 'sass', 'bootlint', 'browser-sync', 'watch']);
