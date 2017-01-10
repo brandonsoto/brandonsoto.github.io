@@ -1,0 +1,50 @@
+@import 'variables'
+
+// TODO(brandon): need to refactor this file
+
+button
+  background-color: $monokai-green
+  text-align: center
+  text-transform: uppercase
+  font-weight: 600
+  cursor: pointer
+  box-shadow: 0px 25px 15px -15px rgba(0, 0, 0 , 0.3)
+  font-size: 1.5em
+  transition: all 200ms ease-in-out
+  border: none
+  padding: 20px
+  margin: 5px
+  &:hover
+    transform: scale(1.10)
+  &:active
+    color: darken($monokai-green, 20%)
+
+.btn-lg
+  color: $dark-background
+  &:active
+    color: white
+
+.btn
+  font-family: $open-sans-font
+  border: none
+  border-radius: 300px
+  font-weight: 700
+  text-transform: uppercase
+
+.btn-social,
+.btn-social:visited
+  display: inline-block
+  color: white
+  height: 50px
+  width: 50px
+  border: 2px solid white
+  border-radius: 100%
+  text-align: center
+  line-height: 45px
+  font-size: 20px
+  transition: all 200ms ease-in-out
+  &:hover, &:active
+    color: $monokai-red
+    background-color: white
+    transform: scale(1.2)
+
