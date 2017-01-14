@@ -27,7 +27,7 @@ gulp.task( 'bootlint', ['sass'], function() {
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', ['sass-lint'], function () {
+gulp.task('sass', function () {
     return gulp.src('assets/css/main.sass')
        .pipe(sourcemaps.init())
        .pipe(sass().on('error', sass.logError))
@@ -71,7 +71,7 @@ gulp.task('sass-lint-verbose', function() {
     return gulp.src('assets/css/**/*.sass')
         .pipe( sassLint({
             options: {
-                formatter: 'compact',
+                formatter: 'stylish',
                 'max-warnings': 50
             },
             files: {

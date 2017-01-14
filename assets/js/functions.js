@@ -1,16 +1,23 @@
-$(function () {
+$(function() {
     "use strict";
+
+    document.addEventListener('touchstart', function addtouchclass(e) { // first time user touches the screen
+        document.documentElement.classList.add('can-touch'); // add "can-touch" class to document root using classList API
+        $('footer a').addClass('can-touch');
+        $('button').addClass('can-touch');
+        document.removeEventListener('touchstart', addtouchclass, false); // de-register touchstart event
+    }, false);
 
     validate_contact_form();
     setup_scrolling();
 
-    $("a[data-toggle=\"tab\"]").click(function (e) {
+    $("a[data-toggle=\"tab\"]").click(function(e) {
         e.preventDefault();
         $(this).tab("show");
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function () {
+    $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
@@ -23,25 +30,25 @@ $(function () {
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
     $('.popup-gallery').magnificPopup({
-        delegate: 'a'
-        , type: 'image'
-        , tLoading: 'Loading image #%curr%...'
-        , mainClass: 'mfp-img-mobile'
-        , gallery: {
-            enabled: true
-            , navigateByImgClick: true
-            , preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        }
-        , image: {
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
         }
     });
 
-    $("body").on("input propertychange", ".floating-label-form-group", function (e) {
+    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    }).on("focus", ".floating-label-form-group", function () {
+    }).on("focus", ".floating-label-form-group", function() {
         $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function () {
+    }).on("blur", ".floating-label-form-group", function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 
@@ -52,28 +59,28 @@ function setup_scrolling() {
 
     // Initialize and Configure Scroll Reveal Animation
     $('body').scrollspy({
-        target: '.navbar-fixed-top'
-        , offset: 51
+        target: '.navbar-fixed-top',
+        offset: 51
     });
 
     window.sr = ScrollReveal();
     sr.reveal('.sr-icons', {
-        duration: 600
-        , scale: 0.3
-        , distance: '0px'
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
     }, 200);
     sr.reveal('.sr-button', {
-        duration: 1000
-        , delay: 200
+        duration: 1000,
+        delay: 200
     });
     sr.reveal('.sr-contact', {
-        duration: 600
-        , scale: 0.3
-        , distance: '0px'
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
     }, 300);
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function (event) {
+    $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -87,10 +94,10 @@ function validate_contact_form() {
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function ($form, event, errors) {
+        submitError: function($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: function ($form, event) {
+        submitSuccess: function($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
@@ -128,7 +135,7 @@ function validate_contact_form() {
                 },
                 dataType: "json",
                 cache: false,
-                success: function () {
+                success: function() {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
@@ -142,7 +149,7 @@ function validate_contact_form() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function () {
+                error: function() {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -154,9 +161,8 @@ function validate_contact_form() {
                 }
             });
         },
-        filter: function () {
+        filter: function() {
             return $(this).is(":visible");
         }
     });
 } // end of validate_contact_form
-
