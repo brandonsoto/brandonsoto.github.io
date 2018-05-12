@@ -1,0 +1,50 @@
+[
+    {
+        "category": "work",
+        "name": "Ford SYNC&copy 3",
+        "href": "https://www.ford.com/technology/sync/",
+        "src": "assets/img/portfolio/thumbnails/infotainment.jpeg"
+    },
+    {
+        "category": "open-source contribution",
+        "name": "Tokei",
+        "href": "https://github.com/brandonsoto/tokei",
+        "src": "assets/img/portfolio/thumbnails/tokei.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "Lambda Chat App",
+        "href": "https://github.com/brandonsoto/lambda-chat",
+        "src": "assets/img/portfolio/thumbnails/chat_app.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "VSCode Extension - Pomodoro Timer",
+        "href": "https://marketplace.visualstudio.com/items?itemName=brandonsoto.pomodoro-timer",
+        "src": "assets/img/portfolio/thumbnails/timer.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "GDB Developer Tool (GDT)",
+        "href": "https://github.com/brandonsoto/gdt",
+        "src": "assets/img/portfolio/thumbnails/gdt.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "Reddit Bot - Dogg_Giffter",
+        "href": "https://github.com/brandonsoto/dog_giffter",
+        "src": "assets/img/portfolio/thumbnails/dog_giffter.jpeg"
+    },
+    {
+        "category": "open-source contribution",
+        "name": "tldr",
+        "href": "http://tldr.sh/",
+        "src": "assets/img/portfolio/thumbnails/tldr.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "Christmas Tree Matrix",
+        "href": "https://github.com/brandonsoto/christmas-lights",
+        "src": "assets/img/portfolio/thumbnails/tree.jpg"
+    }
+]

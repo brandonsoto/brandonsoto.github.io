@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     "use strict";
 
     document.addEventListener('touchstart', function addtouchclass(e) { // first time user touches the screen
@@ -11,13 +11,13 @@ $(function() {
     validate_contact_form();
     setup_scrolling();
 
-    $("a[data-toggle=\"tab\"]").click(function(e) {
+    $("a[data-toggle=\"tab\"]").click(function (e) {
         e.preventDefault();
         $(this).tab("show");
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-collapse ul li a').click(function () {
         $('.navbar-toggle:visible').click();
     });
 
@@ -44,15 +44,38 @@ $(function() {
         }
     });
 
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+    $("body").on("input propertychange", ".floating-label-form-group", function (e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    }).on("focus", ".floating-label-form-group", function() {
+    }).on("focus", ".floating-label-form-group", function () {
         $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
+    }).on("blur", ".floating-label-form-group", function () {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
-
+    
+    load_projects();
 }); // end of document ready
+
+function load_projects() {
+    $.getJSON("assets/json/projects.json", function (data) {
+        $.each(data, function (key, val) {
+            var $link = $("<a class='portfolio-box' target='_blank'></a>").attr("href", val.href);
+            var $img = $("<img class='img-responsive'/>").attr("src", val.src).appendTo($link);
+
+            var $category = $("<div class='project-category text-faded'></div>").html(val.category);
+            var $project_name = $("<div class='project-name'></div>").html(val.name);
+            
+            var $box_caption = $("<div class='portfolio-box-caption-content'></div>")
+                .append($category).append($project_name);
+
+
+            var $portfolio_box = $("<div class='portfolio-box-caption'></div>")
+                .append($box_caption).appendTo($link);
+
+            var $outer_container = $("<div class='col-lg-4 col-sm-6'></div>")
+                .append($link).appendTo($("#portfolio-row"));
+        });
+    });
+}
 
 function setup_scrolling() {
     "use strict";
@@ -80,7 +103,7 @@ function setup_scrolling() {
     }, 300);
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function(event) {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -94,10 +117,10 @@ function validate_contact_form() {
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function($form, event, errors) {
+        submitError: function ($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: function($form, event) {
+        submitSuccess: function ($form, event) {
             // Prevent spam click and default submit behaviour
             $("#btnSubmit").attr("disabled", true);
             event.preventDefault();
@@ -135,7 +158,7 @@ function validate_contact_form() {
                 },
                 dataType: "json",
                 cache: false,
-                success: function() {
+                success: function () {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
@@ -149,7 +172,7 @@ function validate_contact_form() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
+                error: function () {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -161,7 +184,7 @@ function validate_contact_form() {
                 }
             });
         },
-        filter: function() {
+        filter: function () {
             return $(this).is(":visible");
         }
     });
