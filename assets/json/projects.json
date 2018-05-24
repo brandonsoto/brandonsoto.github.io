@@ -46,5 +46,11 @@
         "name": "Christmas Tree Matrix",
         "href": "https://github.com/brandonsoto/christmas-lights",
         "src": "assets/img/portfolio/thumbnails/tree.jpg"
+    },
+    {
+        "category": "personal",
+        "name": "Video Game - Minimal",
+        "href": "https://github.com/brandonsoto/Minimal",
+        "src": "assets/img/portfolio/thumbnails/minimal.jpg"
     }
 ]
