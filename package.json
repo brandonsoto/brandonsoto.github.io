@@ -30,7 +30,7 @@
     "url": "https://github.com/BrandonSoto/brandonsoto.github.io.git/issues"
   },
   "dependencies": {
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "snyk": "^1.83.0"
   },
   "snyk": true
